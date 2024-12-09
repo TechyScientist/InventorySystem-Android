@@ -1,10 +1,12 @@
 package com.johnnconsole.android.ims
 
+import android.content.Intent
 import android.os.AsyncTask
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.view.View.*
 import com.google.android.material.snackbar.Snackbar
+import com.johnnconsole.android.ims.data.ApplicationSession
 import com.johnnconsole.android.ims.databinding.ActivityMainBinding
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -58,7 +60,9 @@ class MainActivity : AppCompatActivity() {
                     tvError.visibility = VISIBLE
                 }
                 else {
-                    //TODO: Successful Sign In - Set Session Variables and Open DasbhoardActivity
+                    ApplicationSession.create(username, last_name, first_name, access)
+                    finish()
+                    startActivity(Intent(this@MainActivity, DashboardActivity::class.java))
                 }
                 etUsername.isEnabled = true
                 etPassword.isEnabled = true
