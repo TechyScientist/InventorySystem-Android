@@ -1,9 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.InventorySystemAndroid" parent="Theme.Material3.Light.NoActionBar">
+    <style name="Theme.InventorySystemAndroid.NoActionBar" parent="Theme.Material3.Light.NoActionBar">
         <!-- Customize your light theme here. -->
         <item name="colorPrimary">@android:color/holo_blue_dark</item>
     </style>
 
-    <style name="Theme.InventorySystemAndroid" parent="Base.Theme.InventorySystemAndroid" />
+    <style name="Theme.InventorySystemAndroid.ActionBar" parent="Theme.Material3.Light">
+        <item name="colorPrimary">@android:color/holo_blue_dark</item>
+    </style>
+
 </resources>
