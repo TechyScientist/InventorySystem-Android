@@ -10,4 +10,7 @@
     <string name="Password">Password</string>
     <string name="SignIn">Sign In</string>
 
+    <!-- Strings for DashboardActivity -->
+    <string name="DashboardWelcome">Welcome, %1$s!</string>
+
 </resources>

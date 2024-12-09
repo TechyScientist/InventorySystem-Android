@@ -2,6 +2,7 @@ package com.johnnconsole.android.ims
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.johnnconsole.android.ims.data.ApplicationSession
 import com.johnnconsole.android.ims.databinding.ActivityDashboardBinding
 
 class DashboardActivity : AppCompatActivity() {
@@ -12,6 +13,11 @@ class DashboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        supportActionBar!!.title = "Dashboard"
+        with(binding) {
+            tvWelcome.text = getString(R.string.DashboardWelcome, ApplicationSession.first_name)
+        }
 
     }
 }
