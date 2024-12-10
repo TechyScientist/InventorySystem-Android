@@ -1,8 +1,10 @@
 package com.johnnconsole.android.ims
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.AsyncTask
 import android.os.Bundle
+import android.os.SharedMemory
 import androidx.appcompat.app.AppCompatActivity
 import android.view.View.*
 import com.google.android.material.snackbar.Snackbar
@@ -74,6 +76,13 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val prefs = getSharedPreferences("AndroidIMS", MODE_PRIVATE)
+        if(missingAPIFields(prefs)) {
+            finish()
+            startActivity(Intent(this, ApiEndpointConfigActivity::class.java).putExtra("FromMainActivity", true))
+        }
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -92,6 +101,11 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
 
+    private fun missingAPIFields(prefs: SharedPreferences): Boolean {
+        return !(
+                prefs.contains("API_ENDPOINT")
+                )
     }
 }
