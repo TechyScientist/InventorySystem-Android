@@ -1,6 +1,8 @@
 package com.johnnconsole.android.ims.activity
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.tabs.TabLayout
 import com.johnnconsole.android.ims.fragment.AdminFunctionsFragment
@@ -44,6 +46,21 @@ class DashboardActivity : AppCompatActivity() {
 
             })
         }
+    }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_dashboard, menu)
+        return true
+
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId) {
+            R.id.SignOut -> {
+                finish()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }
