@@ -19,7 +19,7 @@
     <string name="Endpoint">API Endpoint</string>
     <string name="SignInScriptLabel">Sign In Script*:</string>
     <string name="SignInScript">Sign In Script</string>
-    <string name="RelativeWarning">*: Relative to API Endpoint</string>
+    <string name="RelativeWarning">*: Relative to API Endpoint, No slashes</string>
     <string name="SaveAPI">Save API Information</string>
 
 </resources>
