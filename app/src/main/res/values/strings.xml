@@ -13,4 +13,12 @@
     <!-- Strings for DashboardActivity -->
     <string name="DashboardWelcome">Welcome, %1$s!</string>
 
+    <!-- Strings for APIEndpointConfigActivity -->
+    <string name="EndpointLabel">API Endpoint:</string>
+    <string name="Endpoint">API Endpoint</string>
+    <string name="SignInScriptLabel">Sign In Script*:</string>
+    <string name="SignInScript">Sign In Script</string>
+    <string name="RelativeWarning">*: Relative to API Endpoint</string>
+    <string name="SaveAPI">Save API Information</string>
+
 </resources>
