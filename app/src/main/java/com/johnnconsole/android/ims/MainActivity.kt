@@ -4,10 +4,8 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.AsyncTask
 import android.os.Bundle
-import android.os.SharedMemory
 import androidx.appcompat.app.AppCompatActivity
 import android.view.View.*
-import com.google.android.material.snackbar.Snackbar
 import com.johnnconsole.android.ims.data.ApplicationSession
 import com.johnnconsole.android.ims.databinding.ActivityMainBinding
 import org.json.JSONObject
@@ -84,11 +82,13 @@ class MainActivity : AppCompatActivity() {
         with(binding) {
             btSignIn.setOnClickListener {_ ->
                 if(etUsername.text.isNullOrBlank()) {
-                    Snackbar.make(root, "Error: Username Missing", Snackbar.LENGTH_LONG).show()
+                    tvError.text = getString(R.string.Missing, "Username")
+                    tvError.visibility = VISIBLE
                     return@setOnClickListener
                 }
                 else if(etPassword.text.isNullOrBlank()) {
-                    Snackbar.make(root, "Error: Password Missing", Snackbar.LENGTH_LONG).show()
+                    tvError.text = getString(R.string.Missing, "Password")
+                    tvError.visibility = VISIBLE
                     return@setOnClickListener
                 }
                 else {
