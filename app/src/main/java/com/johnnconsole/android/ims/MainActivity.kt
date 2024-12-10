@@ -61,7 +61,6 @@ class MainActivity : AppCompatActivity() {
                 }
                 else {
                     ApplicationSession.create(username, last_name, first_name, access)
-                    finish()
                     startActivity(Intent(this@MainActivity, DashboardActivity::class.java))
                 }
                 etUsername.isEnabled = true
