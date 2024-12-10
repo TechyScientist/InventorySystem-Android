@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.johnnconsole.android.ims"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.johnnconsole.android.ims"
