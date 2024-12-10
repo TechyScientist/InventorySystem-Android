@@ -96,6 +96,10 @@ class MainActivity : AppCompatActivity() {
                     SignInTask().execute(etUsername.text.toString(), etPassword.text.toString())
                 }
             }
+
+            btConfigureAPI.setOnClickListener {_ ->
+                startActivity(Intent(this@MainActivity, ApiEndpointConfigActivity::class.java))
+            }
         }
     }
 

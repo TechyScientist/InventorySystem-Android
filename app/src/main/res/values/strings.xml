@@ -9,6 +9,7 @@
     <string name="PasswordLabel">Password:</string>
     <string name="Password">Password</string>
     <string name="SignIn">Sign In</string>
+    <string name="ConfigureAPI">Change API Settings</string>
     <string name="Missing">Missing %1$s</string>
 
     <!-- Strings for DashboardActivity -->
