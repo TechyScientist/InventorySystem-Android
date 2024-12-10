@@ -23,4 +23,7 @@
     <string name="RelativeWarning">*: Relative to API Endpoint, No slashes</string>
     <string name="SaveAPI">Save API Information</string>
 
+    <!-- Strings for Menus -->
+    <string name="SignOut">Sign Out</string>
+
 </resources>
