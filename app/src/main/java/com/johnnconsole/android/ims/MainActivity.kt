@@ -60,6 +60,8 @@ class MainActivity : AppCompatActivity() {
                     tvError.visibility = VISIBLE
                 }
                 else {
+                    etUsername.text.clear()
+                    etPassword.text.clear()
                     ApplicationSession.create(username, last_name, first_name, access)
                     startActivity(Intent(this@MainActivity, DashboardActivity::class.java))
                 }
