@@ -1,4 +1,4 @@
-package com.johnnconsole.android.ims
+package com.johnnconsole.android.ims.activity
 
 import android.content.Intent
 import android.content.SharedPreferences
@@ -6,6 +6,7 @@ import android.os.AsyncTask
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.view.View.*
+import com.johnnconsole.android.ims.R
 import com.johnnconsole.android.ims.data.ApplicationSession
 import com.johnnconsole.android.ims.databinding.ActivityMainBinding
 import org.json.JSONObject

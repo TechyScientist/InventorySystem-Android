@@ -1,8 +1,11 @@
-package com.johnnconsole.android.ims
+package com.johnnconsole.android.ims.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.tabs.TabLayout
+import com.johnnconsole.android.ims.fragment.AdminFunctionsFragment
+import com.johnnconsole.android.ims.R
+import com.johnnconsole.android.ims.fragment.UserFunctionsFragment
 import com.johnnconsole.android.ims.data.ApplicationSession
 import com.johnnconsole.android.ims.databinding.ActivityDashboardBinding
 
