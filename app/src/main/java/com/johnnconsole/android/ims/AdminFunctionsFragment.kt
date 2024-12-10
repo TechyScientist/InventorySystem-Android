@@ -8,17 +8,12 @@ import android.view.ViewGroup
 
 class AdminFunctionsFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_user_functions, container, false)
+        return inflater.inflate(R.layout.fragment_admin_functions, container, false)
     }
 
 }
