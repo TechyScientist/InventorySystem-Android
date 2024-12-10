@@ -15,9 +15,13 @@
         android:theme="@style/Theme.InventorySystemAndroid.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".ApiEndpointConfigActivity"
+            android:exported="false"
+            android:theme="@style/Theme.InventorySystemAndroid.ActionBar" />
+        <activity
             android:name=".DashboardActivity"
-            android:theme="@style/Theme.InventorySystemAndroid.ActionBar"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.InventorySystemAndroid.ActionBar" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
