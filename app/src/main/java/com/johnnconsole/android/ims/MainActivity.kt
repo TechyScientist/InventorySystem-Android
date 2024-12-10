@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         override fun doInBackground(vararg params: String) {
             username = params[0]
             val password = params[1]
-            val url = URL("https://api.johnnyconsole.com/ims/signin.php?username=$username&password=$password")
+            val url = URL("${prefs.getString("API_ENDPOINT", "")}/${prefs.getString("SIGN_IN_SCRIPT", "")}?username=$username&password=$password")
             val connection = url.openConnection() as HttpsURLConnection
             connection.connect()
             val obj = JSONObject(BufferedReader(InputStreamReader(url.openStream())).readLine())
@@ -73,15 +73,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var prefs: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        val prefs = getSharedPreferences("AndroidIMS", MODE_PRIVATE)
-        if(missingAPIFields(prefs)) {
-            finish()
-            startActivity(Intent(this, ApiEndpointConfigActivity::class.java).putExtra("FromMainActivity", true))
-        }
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -103,9 +98,17 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        prefs = getSharedPreferences("AndroidIMS", MODE_PRIVATE)
+        if(missingAPIFields(prefs)) {
+            startActivity(Intent(this, ApiEndpointConfigActivity::class.java))
+        }
+    }
+
     private fun missingAPIFields(prefs: SharedPreferences): Boolean {
         return !(
-                prefs.contains("API_ENDPOINT")
+                prefs.contains("API_ENDPOINT") && prefs.contains("SIGN_IN_SCRIPT")
                 )
     }
 }
