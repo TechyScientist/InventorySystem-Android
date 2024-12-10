@@ -24,7 +24,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
@@ -40,7 +39,7 @@
                     android:layout_height="48dp"
                     android:id="@+id/etEndpoint"
                     android:ems="12"
-                    android:inputType="text"
+                    android:inputType="textUri"
                     android:hint="@string/Endpoint"
                     android:autofillHints=""/>
 
@@ -63,7 +62,7 @@
                     android:layout_height="48dp"
                     android:id="@+id/etSignInScript"
                     android:ems="12"
-                    android:inputType="text"
+                    android:inputType="textUri"
                     android:hint="@string/SignInScript"
                     android:autofillHints=""/>
 
