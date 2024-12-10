@@ -2,8 +2,6 @@ package com.johnnconsole.android.ims
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.tabs.TabItem
-import com.google.android.material.tabs.TabLayout
 import com.johnnconsole.android.ims.data.ApplicationSession
 import com.johnnconsole.android.ims.databinding.ActivityDashboardBinding
 
