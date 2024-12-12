@@ -46,4 +46,16 @@
     <string name="EditInventoryItem">Edit Inventory Item</string>
     <string name="DeleteInventoryItem">Delete Inventory Item</string>
 
+    <!-- Strings for Adding Users -->
+    <string name="FirstNameLabel">First Name:</string>
+    <string name="FirstName">First Name</string>
+    <string name="LastNameLabel">Last Name:</string>
+    <string name="LastName">Last Name</string>
+    <string name="AccessLabel">Access Type:</string>
+    <string-array name="Access">
+        <item>Standard User</item>
+        <item>Administrative User</item>
+    </string-array>
+
+
 </resources>

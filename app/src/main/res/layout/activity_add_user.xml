@@ -7,4 +7,141 @@
     android:layout_height="match_parent"
     tools:context=".activity.AddUserActivity">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/llUsername"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/UsernameLabel"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:id="@+id/etUsername"
+            android:ems="12"
+            android:layout_marginStart="10dp"
+            android:hint="@string/Username"
+            android:inputType="text"
+            android:autofillHints="username"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/llFirstName"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llUsername">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/FirstNameLabel"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:id="@+id/etFirstName"
+            android:ems="12"
+            android:layout_marginStart="10dp"
+            android:hint="@string/FirstName"
+            android:inputType="text"
+            android:autofillHints="username"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/llLastName"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llFirstName">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/LastNameLabel"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:id="@+id/etLastName"
+            android:ems="12"
+            android:layout_marginStart="10dp"
+            android:hint="@string/LastName"
+            android:inputType="text"
+            android:autofillHints="username"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/llPassword"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llLastName">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/PasswordLabel"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:id="@+id/etPassword"
+            android:ems="12"
+            android:layout_marginStart="10dp"
+            android:hint="@string/Password"
+            android:inputType="textPassword"
+            android:autofillHints="username"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/llAccess"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llPassword">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/AccessLabel"/>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:id="@+id/spAccess"
+            android:layout_marginStart="10dp"
+            android:entries="@array/Access"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btAddUser"
+        android:text="@string/AddUser"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llAccess"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
