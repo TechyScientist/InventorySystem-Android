@@ -3,6 +3,7 @@ package com.johnnconsole.android.ims.activity
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.BaseTransientBottomBar.LENGTH_LONG
 import com.google.android.material.snackbar.Snackbar
@@ -22,6 +23,7 @@ class ApiEndpointConfigActivity : AppCompatActivity() {
         with(binding) {
             etEndpoint.setText(prefs.getString("API_ENDPOINT", ""))
             etSignInScript.setText(prefs.getString("SIGN_IN_SCRIPT", ""))
+            etAddUserScript.setText(prefs.getString("ADD_USER_SCRIPT", ""))
 
             btSaveAPI.setOnClickListener {_ ->
                 if(!etEndpoint.text.isNullOrBlank() && !etSignInScript.text.isNullOrBlank() && !etAddUserScript.text.isNullOrBlank()) {
