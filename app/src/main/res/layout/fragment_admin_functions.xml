@@ -11,10 +11,90 @@
         android:orientation="vertical"
         android:padding="10dp">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Standard"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"/>
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Admin"/>
+            android:id="@+id/btCheckInventory"
+            android:text="@string/CheckInventory"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/AddInventory"
+            android:id="@+id/btAddInventory"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/RemoveInventory"
+            android:id="@+id/btRemoveInventory"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Admin"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/btConfigureAPI"
+            android:text="@string/ConfigureAPI"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/btAddUser"
+            android:text="@string/AddUser"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/btEditUser"
+            android:text="@string/EditUser"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/btDeleteUser"
+            android:text="@string/DeleteUser"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/btAddInventoryItem"
+            android:text="@string/AddInventoryItem"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/btEditInventoryItem"
+            android:text="@string/EditInventoryItem"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/btRemoveInventoryItem"
+            android:text="@string/DeleteInventoryItem"
+            android:layout_marginBottom="10dp"/>
+
 
     </LinearLayout>
 

@@ -9,7 +9,6 @@
     <string name="PasswordLabel">Password:</string>
     <string name="Password">Password</string>
     <string name="SignIn">Sign In</string>
-    <string name="ConfigureAPI">Change API Settings</string>
     <string name="Missing">Missing %1$s</string>
 
     <!-- Strings for DashboardActivity -->
@@ -25,5 +24,21 @@
 
     <!-- Strings for Menus -->
     <string name="SignOut">Sign Out</string>
+
+    <!-- Strings for Standard Functions -->
+    <string name="Standard">Standard Functions</string>
+    <string name="CheckInventory">Check Inventory</string>
+    <string name="AddInventory">Add to Inventory</string>
+    <string name="RemoveInventory">Remove from Inventory</string>
+
+    <!-- Strings for Admin Functions -->
+    <string name="Admin">Administrative Functions</string>
+    <string name="ConfigureAPI">Change API Settings</string>
+    <string name="AddUser">Add New User</string>
+    <string name="EditUser">Edit User</string>
+    <string name="DeleteUser">Delete User</string>
+    <string name="AddInventoryItem">Add Inventory Item</string>
+    <string name="EditInventoryItem">Edit Inventory Item</string>
+    <string name="DeleteInventoryItem">Delete Inventory Item</string>
 
 </resources>
