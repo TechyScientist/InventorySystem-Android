@@ -50,4 +50,13 @@ class ApiEndpointConfigActivity : AppCompatActivity() {
         }
         else false
     }
+
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return if(item.itemId == R.id.Back) {
+            finish()
+            true
+        }
+        else super.onOptionsItemSelected(item)
+    }
 }
