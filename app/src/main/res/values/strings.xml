@@ -26,6 +26,7 @@
 
     <!-- Strings for Menus -->
     <string name="SignOut">Sign Out</string>
+    <string name="Back">Back</string>
 
     <!-- Strings for Standard Functions -->
     <string name="Standard">Standard Functions</string>
