@@ -31,8 +31,10 @@
     <!-- Strings for Standard Functions -->
     <string name="Standard">Standard Functions</string>
     <string name="CheckInventory">Check Inventory</string>
-    <string name="AddInventory">Add to Inventory</string>
-    <string name="RemoveInventory">Remove from Inventory</string>
+    <string name="CheckOut">Check Out - Borrow</string>
+    <string name="CheckIn">Check In - Return</string>
+    <string name="AddInventory">Add to Inventory - Non-Borrow</string>
+    <string name="RemoveInventory">Remove from Inventory - Non-Borrow</string>
 
     <!-- Strings for Admin Functions -->
     <string name="Admin">Administrative Functions</string>

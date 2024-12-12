@@ -28,6 +28,20 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:text="@string/CheckOut"
+            android:id="@+id/btCheckOu"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/CheckIn"
+            android:id="@+id/btCheckIn"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="@string/AddInventory"
             android:id="@+id/btAddInventory"
             android:layout_marginBottom="10dp"/>
