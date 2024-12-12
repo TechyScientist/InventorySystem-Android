@@ -104,7 +104,7 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
         prefs = getSharedPreferences("AndroidIMS", MODE_PRIVATE)
         if(missingAPIFields(prefs)) {
-            startActivity(Intent(this, ApiEndpointConfigActivity::class.java))
+            startActivity(Intent(this, ApiEndpointConfigActivity::class.java).putExtra("MENU_FLAG", true))
         }
     }
 
