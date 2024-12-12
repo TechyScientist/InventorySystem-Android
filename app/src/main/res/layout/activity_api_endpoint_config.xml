@@ -68,6 +68,29 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/AddUserScriptLabel"
+                    android:layout_marginEnd="10dp"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:id="@+id/etAddUserScript"
+                    android:ems="12"
+                    android:inputType="textUri"
+                    android:hint="@string/AddUserScript"
+                    android:autofillHints=""/>
+
+            </LinearLayout>
+
         </LinearLayout>
 
     </ScrollView>

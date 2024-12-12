@@ -110,7 +110,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun missingAPIFields(prefs: SharedPreferences): Boolean {
         return !(
-                prefs.contains("API_ENDPOINT") && prefs.contains("SIGN_IN_SCRIPT")
-                )
+            prefs.contains("API_ENDPOINT") &&
+            prefs.contains("SIGN_IN_SCRIPT") &&
+            prefs.contains("ADD_USER_SCRIPT")
+        )
     }
 }

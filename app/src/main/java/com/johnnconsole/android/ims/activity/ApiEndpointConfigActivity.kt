@@ -14,17 +14,18 @@ class ApiEndpointConfigActivity : AppCompatActivity() {
         binding = ActivityApiEndpointConfigBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar!!.title = "Configure API Endpoint"
-        var prefs = getSharedPreferences("AndroidIMS", MODE_PRIVATE)
+        val prefs = getSharedPreferences("AndroidIMS", MODE_PRIVATE)
 
         with(binding) {
             etEndpoint.setText(prefs.getString("API_ENDPOINT", ""))
             etSignInScript.setText(prefs.getString("SIGN_IN_SCRIPT", ""))
 
             btSaveAPI.setOnClickListener {_ ->
-                if(!etEndpoint.text.isNullOrBlank() && !etSignInScript.text.isNullOrBlank()) {
+                if(!etEndpoint.text.isNullOrBlank() && !etSignInScript.text.isNullOrBlank() && !etAddUserScript.text.isNullOrBlank()) {
                     val editor = prefs.edit()
                     editor.putString("API_ENDPOINT", etEndpoint.text.toString())
                     editor.putString("SIGN_IN_SCRIPT", etSignInScript.text.toString())
+                    editor.putString("ADD_USER_SCRIPT", etAddUserScript.text.toString())
                     editor.apply()
                     finish()
                 }
