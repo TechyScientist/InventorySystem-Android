@@ -16,7 +16,7 @@ class AdminFunctionsFragment : Fragment() {
     private lateinit var activity: FragmentActivity
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        binding = FragmentAdminFunctionsBinding.inflate(layoutInflater)
+        binding = FragmentAdminFunctionsBinding.inflate(inflater)
         activity = requireActivity()
         with(binding) {
             btConfigureAPI.setOnClickListener {_ ->
