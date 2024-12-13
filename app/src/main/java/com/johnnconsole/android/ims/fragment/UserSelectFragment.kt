@@ -28,7 +28,7 @@ class UserSelectFragment : Fragment() {
     private lateinit var prefs: SharedPreferences
     private var list = ArrayList<String>()
 
-    private inner class GetUserListTask: AsyncTask<String, Unit, Unit>() {
+    private inner class GetUserListTask: AsyncTask<Unit, Unit, Unit>() {
         var error = ""
         var array: JSONArray? = null
 
@@ -43,10 +43,9 @@ class UserSelectFragment : Fragment() {
             }
         }
 
-        override fun doInBackground(vararg params: String) {
-            val username = if(params.isEmpty()) "" else params[0]
+        override fun doInBackground(vararg params: Unit) {
             val url = URL(
-                "${prefs.getString("API_ENDPOINT", "")}/${prefs.getString("GET_USER_LIST_SCRIPT", "")}?exclude=$username"
+                "${prefs.getString("API_ENDPOINT", "")}/${prefs.getString("GET_USER_LIST_SCRIPT", "")}"
             )
             val connection = url.openConnection() as HttpsURLConnection
             connection.connect()
