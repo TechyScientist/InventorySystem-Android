@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentActivity
 import com.johnnconsole.android.ims.activity.AddUserActivity
 import com.johnnconsole.android.ims.activity.ApiEndpointConfigActivity
 import com.johnnconsole.android.ims.activity.DeleteUserActivity
+import com.johnnconsole.android.ims.activity.EditUserActivity
 import com.johnnconsole.android.ims.databinding.FragmentAdminFunctionsBinding
 
 class AdminFunctionsFragment : Fragment() {
@@ -27,6 +28,10 @@ class AdminFunctionsFragment : Fragment() {
 
             btAddUser.setOnClickListener {_ ->
                 activity.startActivity(Intent(activity, AddUserActivity::class.java))
+            }
+
+            btEditUser.setOnClickListener {_ ->
+                activity.startActivity(Intent(activity, EditUserActivity::class.java))
             }
 
             btDeleteUser.setOnClickListener {_ ->
