@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
                 tvError.visibility = GONE
                 etUsername.isEnabled = false
                 etPassword.isEnabled = false
+                btSignIn.isEnabled = false
             }
         }
 
@@ -68,6 +69,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 etUsername.isEnabled = true
                 etPassword.isEnabled = true
+                btSignIn.isEnabled = true
             }
         }
     }
