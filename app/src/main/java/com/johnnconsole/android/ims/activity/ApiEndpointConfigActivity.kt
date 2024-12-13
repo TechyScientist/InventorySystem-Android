@@ -1,7 +1,6 @@
 package com.johnnconsole.android.ims.activity
 
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
@@ -28,7 +27,9 @@ class ApiEndpointConfigActivity : AppCompatActivity() {
             etDeleteUserScript.setText(prefs.getString("DELETE_USER_SCRIPT", ""))
 
             btSaveAPI.setOnClickListener {_ ->
-                if(!etEndpoint.text.isNullOrBlank() && !etSignInScript.text.isNullOrBlank() && !etAddUserScript.text.isNullOrBlank()) {
+                if(!(etEndpoint.text.isNullOrBlank() && etSignInScript.text.isNullOrBlank() &&
+                    etAddUserScript.text.isNullOrBlank() && etGetUserListScript.text.isNullOrBlank() &&
+                    etDeleteUserScript.text.isNullOrBlank())) {
                     val editor = prefs.edit()
                     editor.putString("API_ENDPOINT", etEndpoint.text.toString())
                     editor.putString("SIGN_IN_SCRIPT", etSignInScript.text.toString())
@@ -47,7 +48,6 @@ class ApiEndpointConfigActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        Log.d("CLASS", intent.component!!.className)
         return if(!intent.getBooleanExtra("MENU_FLAG", false)) {
             menuInflater.inflate(R.menu.menu_back, menu)
             true
