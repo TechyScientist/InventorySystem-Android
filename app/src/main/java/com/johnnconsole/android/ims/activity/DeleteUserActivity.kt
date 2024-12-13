@@ -9,6 +9,7 @@ import android.view.View.GONE
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import android.widget.ArrayAdapter
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import com.johnnconsole.android.ims.R
@@ -28,6 +29,7 @@ class DeleteUserActivity : AppCompatActivity() {
         var array: JSONArray? = null
 
         override fun onPreExecute() {
+            list.clear()
             with(binding) {
                 pbIndicator.visibility = VISIBLE
                 tvError.text = ""
@@ -66,6 +68,49 @@ class DeleteUserActivity : AppCompatActivity() {
                     spUsername.adapter = UserAdapter()
                     llUsername.visibility = VISIBLE
                     btDeleteUser.visibility = VISIBLE
+                    btDeleteUser.isEnabled = true
+                    spUsername.isEnabled = true
+                }
+            }
+        }
+    }
+
+    private inner class DeleteUserTask: AsyncTask<String, Unit, Unit>() {
+
+        private var error = ""
+        private var username = ""
+        override fun onPreExecute() {
+            super.onPreExecute()
+            with(binding) {
+                pbIndicator.visibility = INVISIBLE
+                btDeleteUser.isEnabled = false
+                spUsername.isEnabled = false
+            }
+        }
+
+        override fun doInBackground(vararg params: String) {
+            username = params[0]
+
+            val url = URL(
+                "${prefs.getString("API_ENDPOINT", "")}/${prefs.getString("DELETE_USER_SCRIPT", "")}?username=${username}"
+            )
+            val connection = url.openConnection() as HttpsURLConnection
+            connection.connect()
+            val obj = JSONObject(BufferedReader(InputStreamReader(url.openStream())).readLine())
+            if (obj.has("error")) {
+                error = obj.getString("error")
+            }
+        }
+
+        override fun onPostExecute(result: Unit) {
+            super.onPostExecute(result)
+            with(binding) {
+                if(error.isNotBlank()) {
+                    tvError.text = error
+                    tvError.visibility = VISIBLE
+                } else {
+                    GetUserListTask().execute()
+                    Snackbar.make(root, "User Deleted Successfully", Snackbar.LENGTH_LONG).show()
                 }
             }
         }
@@ -85,7 +130,6 @@ class DeleteUserActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDeleteUserBinding
     private lateinit var prefs: SharedPreferences
     private val list = ArrayList<String>()
-    private var snackbar: Snackbar? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -97,7 +141,17 @@ class DeleteUserActivity : AppCompatActivity() {
         GetUserListTask().execute()
 
         with(binding) {
-
+            btDeleteUser.setOnClickListener {_ ->
+                AlertDialog.Builder(this@DeleteUserActivity)
+                    .setTitle(R.string.Confirm)
+                    .setMessage(getString(R.string.ConfirmDeleteUser, spUsername.selectedItem.toString()))
+                    .setIcon(android.R.drawable.stat_notify_error)
+                    .setNeutralButton(R.string.No) {dialog, _ -> dialog.dismiss()}
+                    .setPositiveButton(R.string.Yes) {dialog, _ ->
+                        DeleteUserTask().execute(spUsername.selectedItem.toString())
+                        dialog.dismiss()
+                    }.create().show()
+            }
         }
     }
 

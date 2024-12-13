@@ -61,5 +61,10 @@
         <item>Administrative User</item>
     </string-array>
 
+    <!-- Strings for Dialogs -->
+    <string name="Confirm">Confirm Delete</string>
+    <string name="ConfirmDeleteUser">Are you sure you want to delete the user %1$s?</string>
+    <string name="No">No</string>
+    <string name="Yes">Yes</string>
 
 </resources>
