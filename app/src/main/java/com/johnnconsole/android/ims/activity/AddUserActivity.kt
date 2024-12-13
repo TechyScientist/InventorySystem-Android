@@ -3,7 +3,6 @@ package com.johnnconsole.android.ims.activity
 import android.content.SharedPreferences
 import android.os.AsyncTask
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View.GONE
@@ -47,7 +46,6 @@ class AddUserActivity : AppCompatActivity() {
             val url = URL(
                 "${prefs.getString("API_ENDPOINT", "")}/${prefs.getString("ADD_USER_SCRIPT", "")}?username=$username&first_name=$firstName&last_name=$lastName&password=$password&access=$access"
             )
-            Log.d("URL", url.toString())
             val connection = url.openConnection() as HttpsURLConnection
             connection.connect()
             val obj = JSONObject(BufferedReader(InputStreamReader(url.openStream())).readLine())
