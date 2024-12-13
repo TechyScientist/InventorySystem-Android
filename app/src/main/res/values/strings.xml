@@ -23,6 +23,8 @@
     <string name="AddUserScript">Add User Script</string>
     <string name="GetUserListScriptLabel">User List Script:</string>
     <string name="GetUserListScript">User List Script</string>
+    <string name="UpdateUserScriptLabel">Update User Script:</string>
+    <string name="UpdateUserScript">Update User Script</string>
     <string name="DeleteUserScriptLabel">Delete User Script:</string>
     <string name="DeleteUserScript">Delete User Script</string>
     <string name="RelativeWarning">Scripts are Relative to API Endpoint, No slashes</string>
