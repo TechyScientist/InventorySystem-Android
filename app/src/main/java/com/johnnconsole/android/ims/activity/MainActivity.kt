@@ -112,7 +112,9 @@ class MainActivity : AppCompatActivity() {
         return !(
             prefs.contains("API_ENDPOINT") &&
             prefs.contains("SIGN_IN_SCRIPT") &&
-            prefs.contains("ADD_USER_SCRIPT")
+            prefs.contains("ADD_USER_SCRIPT") &&
+            prefs.contains("GET_USER_LIST_SCRIPT") &&
+            prefs.contains("DELETE_USER_SCRIPT")
         )
     }
 }
