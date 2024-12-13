@@ -50,7 +50,7 @@
     <string name="EditInventoryItem">Edit Inventory Item</string>
     <string name="DeleteInventoryItem">Delete Inventory Item</string>
 
-    <!-- Strings for Adding Users -->
+    <!-- Strings for Adding and Editing Users -->
     <string name="FirstNameLabel">First Name:</string>
     <string name="FirstName">First Name</string>
     <string name="LastNameLabel">Last Name:</string>
@@ -60,6 +60,8 @@
         <item>Standard User</item>
         <item>Administrative User</item>
     </string-array>
+    <string name="Save">Save Changes</string>
+    <string name="SelectUser">Select User</string>
 
     <!-- Strings for Dialogs -->
     <string name="Confirm">Confirm Delete</string>
