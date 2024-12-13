@@ -21,6 +21,10 @@
     <string name="SignInScript">Sign In Script</string>
     <string name="AddUserScriptLabel">Add User Script:<sup>*</sup></string>
     <string name="AddUserScript">Add User Script</string>
+    <string name="GetUserListScriptLabel">User List Script:<sup>*</sup></string>
+    <string name="GetUserListScript">User List Script</string>
+    <string name="DeleteUserScriptLabel">Delete User Script:<sup>*</sup></string>
+    <string name="DeleteUserScript">Delete User Script</string>
     <string name="RelativeWarning">*: Relative to API Endpoint, No slashes</string>
     <string name="SaveAPI">Save API Information</string>
 
