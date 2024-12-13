@@ -12,8 +12,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/llEndpoint"
         android:orientation="horizontal"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/llSave"
@@ -38,7 +37,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
                     android:id="@+id/etEndpoint"
-                    android:ems="12"
+                    android:ems="10"
                     android:inputType="textUri"
                     android:hint="@string/Endpoint"
                     android:autofillHints=""/>
@@ -61,7 +60,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
                     android:id="@+id/etSignInScript"
-                    android:ems="12"
+                    android:ems="10"
                     android:inputType="textUri"
                     android:hint="@string/SignInScript"
                     android:autofillHints=""/>
@@ -84,7 +83,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
                     android:id="@+id/etAddUserScript"
-                    android:ems="12"
+                    android:ems="10"
                     android:inputType="textUri"
                     android:hint="@string/AddUserScript"
                     android:autofillHints=""/>
@@ -107,7 +106,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
                     android:id="@+id/etGetUserListScript"
-                    android:ems="12"
+                    android:ems="10"
                     android:inputType="textUri"
                     android:hint="@string/GetUserListScript"
                     android:autofillHints=""/>
@@ -130,7 +129,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
                     android:id="@+id/etDeleteUserScript"
-                    android:ems="12"
+                    android:ems="10"
                     android:inputType="textUri"
                     android:hint="@string/DeleteUserScript"
                     android:autofillHints=""/>
