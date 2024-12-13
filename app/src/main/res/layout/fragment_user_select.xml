@@ -43,7 +43,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btDeleteUser"
+        android:id="@+id/btSelectUser"
         android:text="@string/SelectUser"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
