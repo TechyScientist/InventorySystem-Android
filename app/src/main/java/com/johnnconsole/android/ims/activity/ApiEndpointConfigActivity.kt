@@ -24,6 +24,8 @@ class ApiEndpointConfigActivity : AppCompatActivity() {
             etEndpoint.setText(prefs.getString("API_ENDPOINT", ""))
             etSignInScript.setText(prefs.getString("SIGN_IN_SCRIPT", ""))
             etAddUserScript.setText(prefs.getString("ADD_USER_SCRIPT", ""))
+            etGetUserListScript.setText(prefs.getString("GET_USER_LIST_SCRIPT", ""))
+            etDeleteUserScript.setText(prefs.getString("DELETE_USER_SCRIPT", ""))
 
             btSaveAPI.setOnClickListener {_ ->
                 if(!etEndpoint.text.isNullOrBlank() && !etSignInScript.text.isNullOrBlank() && !etAddUserScript.text.isNullOrBlank()) {
@@ -31,6 +33,8 @@ class ApiEndpointConfigActivity : AppCompatActivity() {
                     editor.putString("API_ENDPOINT", etEndpoint.text.toString())
                     editor.putString("SIGN_IN_SCRIPT", etSignInScript.text.toString())
                     editor.putString("ADD_USER_SCRIPT", etAddUserScript.text.toString())
+                    editor.putString("GET_USER_LIST_SCRIPT", etGetUserListScript.text.toString())
+                    editor.putString("DELETE_USER_SCRIPT", etDeleteUserScript.text.toString())
                     editor.apply()
                     finish()
                 }

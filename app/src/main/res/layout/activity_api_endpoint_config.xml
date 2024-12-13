@@ -91,6 +91,52 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/GetUserListScriptLabel"
+                    android:layout_marginEnd="10dp"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:id="@+id/etGetUserListScript"
+                    android:ems="12"
+                    android:inputType="textUri"
+                    android:hint="@string/GetUserListScript"
+                    android:autofillHints=""/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DeleteUserScriptLabel"
+                    android:layout_marginEnd="10dp"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:id="@+id/etDeleteUserScript"
+                    android:ems="12"
+                    android:inputType="textUri"
+                    android:hint="@string/DeleteUserScript"
+                    android:autofillHints=""/>
+
+            </LinearLayout>
+
         </LinearLayout>
 
     </ScrollView>
