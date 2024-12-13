@@ -24,17 +24,19 @@ class ApiEndpointConfigActivity : AppCompatActivity() {
             etSignInScript.setText(prefs.getString("SIGN_IN_SCRIPT", ""))
             etAddUserScript.setText(prefs.getString("ADD_USER_SCRIPT", ""))
             etGetUserListScript.setText(prefs.getString("GET_USER_LIST_SCRIPT", ""))
+            etUpdateUserScript.setText(prefs.getString("UPDATE_USER_SCRIPT", ""))
             etDeleteUserScript.setText(prefs.getString("DELETE_USER_SCRIPT", ""))
 
             btSaveAPI.setOnClickListener {_ ->
-                if(!(etEndpoint.text.isNullOrBlank() && etSignInScript.text.isNullOrBlank() &&
-                    etAddUserScript.text.isNullOrBlank() && etGetUserListScript.text.isNullOrBlank() &&
-                    etDeleteUserScript.text.isNullOrBlank())) {
+                if(!(etEndpoint.text.isNullOrBlank() || etSignInScript.text.isNullOrBlank() ||
+                    etAddUserScript.text.isNullOrBlank() || etGetUserListScript.text.isNullOrBlank() ||
+                    etUpdateUserScript.text.isNullOrBlank() || etDeleteUserScript.text.isNullOrBlank())) {
                     val editor = prefs.edit()
                     editor.putString("API_ENDPOINT", etEndpoint.text.toString())
                     editor.putString("SIGN_IN_SCRIPT", etSignInScript.text.toString())
                     editor.putString("ADD_USER_SCRIPT", etAddUserScript.text.toString())
                     editor.putString("GET_USER_LIST_SCRIPT", etGetUserListScript.text.toString())
+                    editor.putString("UPDATE_USER_SCRIPT", etUpdateUserScript.text.toString())
                     editor.putString("DELETE_USER_SCRIPT", etDeleteUserScript.text.toString())
                     editor.apply()
                     finish()
